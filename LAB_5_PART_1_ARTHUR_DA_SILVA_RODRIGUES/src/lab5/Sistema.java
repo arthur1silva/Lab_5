@@ -41,7 +41,7 @@ public class Sistema {
  
 	}
 	
-	public String exibeCenario(int cenario) {
+	public String exibirCenario(int cenario) {
 		return this.cenarios.get(cenario - 1).toString();
 	}
 
@@ -117,7 +117,7 @@ public class Sistema {
 		}
 		return 0;
 	}
-		
+	
 		
 	
 }

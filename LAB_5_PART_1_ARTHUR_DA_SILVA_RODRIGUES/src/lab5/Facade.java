@@ -1,5 +1,7 @@
 package lab5;
 
+import easyaccept.EasyAccept;
+
 public class Facade {
 
 	private Sistema sistema;
@@ -17,7 +19,7 @@ public class Facade {
 	}
 	
 	public String exibirCenario(int cenario) {
-		return this.sistema.exibeCenario(cenario);
+		return this.sistema.exibirCenario(cenario);
 	}
 	
 	public String exibirCenarios() {
@@ -36,16 +38,22 @@ public class Facade {
 		return this.sistema.totalDeApostas(cenario);
 	}
 	
-	public void fechaAposta(int cenario, boolean ocorreu) {
+	public void fecharAposta(int cenario, boolean ocorreu) {
 		this.sistema.fecharAposta(cenario, ocorreu);
 	}
-	
-	public int getCaixaCenario(int cenario){
+
+	public int getCaixaCenario(int cenario) {
 		return this.sistema.getCaixaCenario(cenario);
 	}
 	
 	public int getTotalRateioCenario(int cenario) {
 		return this.sistema.getTotalRateioCenario(cenario);
+	}
+	
+	public static void main(String[] args) {
+		String[] tests = new String[] {"lab5.Facade", "acceptance_tests/us1_test.txt", "acceptance_tests/us2_test.txt", "acceptance_tests/us3_test.txt",
+				"acceptance_tests/us4_test.txt"};
+		EasyAccept.main(tests);
 	}
 	
 }
